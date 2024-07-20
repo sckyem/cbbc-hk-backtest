@@ -664,3 +664,7 @@ def as_df(series):
 def as_list(var):    
     if not isinstance(var, list):
         return [var]
+    
+def filter_out_None(array):
+    if isinstance(array, list):
+        return [  i for i in array if i is not None  ]
